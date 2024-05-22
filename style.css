@@ -1,0 +1,326 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero {
+    position: relative;
+    height: 800px; /* Adjust as needed */
+    background-image: url('kotlinmain.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.welcome-message {
+    position: absolute;
+    top: 40%; /* Adjust to vertically center */
+    left: 5%; /* Adjust to position from left */
+    /*transform: translateY(-50%); /* Vertically center */
+    color: white; /* Adjust text color */
+    font-size: 36px; /* Adjust font size */
+    line-height: 1.5;
+    animation: fadeInUp 2s ease;
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-section {
+    background-color: #000000; /* Black background color */
+    padding: 2%; /* Adjust padding as needed */
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    border-radius: 15px; /* Rounded corners for the box */
+}
+
+.team-section {
+    padding: 50px 0;
+    color: #000000;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #000000;
+    transition: transform 0.5s ease; /* Apply smooth transition */
+    flex: 0 0 calc(33.33% - 20px);
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+/* Define animation for flipping effect */
+@keyframes flip {
+    from {
+        transform: rotateY(-180deg);
+    }
+    to {
+        transform: rotateY(0deg);
+    }
+}
+
+/* Apply the flipping animation when the flip class is added */
+.flip {
+    animation: flip 1.33s ease;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Centers the content horizontally */
+    position: relative; /* Ensure the content is positioned relative */
+    z-index: 1;
+}
+
+.about-image {
+    flex: 1;
+    padding: 20px;
+    max-width: 30%; 
+}
+
+.about-text {
+    font-size: 25px;
+    flex: 1;
+    padding: 1%;
+    max-width: 70%; 
+    background-image: linear-gradient(43deg, #1100ff 0%, #8a0da7 46%, #ff00bf 100%);/*(to right, blue, pink);*/
+    background-clip: text;
+    color: transparent;
+}
+
+.about-image img {
+    max-width: 100%; /* Ensures the image does not exceed its container */
+}
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-image,
+    .about-text {
+        max-width: 100%;
+    }
+}
+.external-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 20px auto;
+    flex-wrap: wrap; /* Ensure items wrap when necessary */
+  }
+  .link-box {
+    background-color: rgb(219, 207, 194);
+    padding: 20px;
+    padding-left: 2px;
+    padding-top: 2px;
+    padding-right: 2px;
+    text-align: center;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    width: 35%; /* Adjust as needed */
+    margin: 10px; /* Adjust as needed */
+    box-sizing: border-box;
+  }
+  
+  .link-box img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .link-box a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .link-box:hover {
+    transform: translateY(-15px);
+  }
+  
+  .zoom-in {
+    animation: zoomIn 2.0s forwards;
+  }
+  
+  @keyframes zoomIn {
+    from {
+        transform: scale(0.7);
+    }
+    to {
+        transform: scale(1.0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .link-box {
+      width: 45%; /* Adjust this value to ensure side-by-side on smaller screens */
+      margin: 5px; /* Adjust as needed */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .link-box {
+      width: 90%; /* Adjust this value if the side-by-side layout breaks */
+      margin: 5px auto; /* Center items with auto margin */
+    }
+  }
+  
+  
+  
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .image-container img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .image-container button {
+    background-color: #ffffff;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .image-container button:hover {
+    background-color: #9736c8;
+  }
+  
+  @media (max-width: 768px) {
+    .external-links {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .link-box {
+        margin-bottom: 20px;
+        width: 80%;
+    }
+  }
+  
+  
+  .speakers-section {
+    padding: 50px 0;
+    color: #ffffff;
+  }
+  
+  .speakers {
+    display: flex;
+    justify-content: center; /* Center the speakers horizontally */
+    flex-wrap: wrap;
+    
+  }
+  
+  .speaker {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ffffff;
+    flex: 0 0 calc(33.33% - 20px); /* Each speaker takes one-third of the width */
+    margin: 10px; /* Add spacing between speakers*/ 
+    padding: 10px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+  }
+  
+  .speaker img {
+    max-width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .speaker-links a {
+    color: #ffffff;
+    text-decoration: none;
+   /* margin: 0 10px;*/
+  }
+  
+  @media (max-width: 768px) {
+    .speaker {
+        flex: 0 0 calc(50% - 20px); /* Two speakers per row for mobile */
+    }
+  }
+  
+  .speaker:hover {
+    transform: scale(1.1); /* Scale the speaker on hover */
+  } 
+  
+  .subtitle {
+    color: #888; /* Grey color for the subtitle */
+    font-size: 14px; /* Adjust font size as needed */
+  }
+  
+  .social-links a {
+    color: #a13d3d; /* Color for the icons */
+    text-decoration: none;
+    margin-right: 10px; /* Adjust margin between icons */
+    font-size: 20px; /* Adjust icon size */
+  }
+  
+  .social-links a:hover {
+    color: #007bff; /* Color on hover */
+  }
