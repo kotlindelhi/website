@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Sponsor Us</title>
     <style>
- body {
+        body {
     font-family: Arial, sans-serif;
     background-color: #121212;
     color: #e0e0e0;
@@ -45,6 +45,8 @@ label {
 
 input[type="text"],
 input[type="email"],
+input[type="organization"],
+input[type="other"],
 textarea {
     width: 95%;
     padding: 10px;
@@ -57,6 +59,8 @@ textarea {
 
 input[type="text"]:focus,
 input[type="email"]:focus,
+input[type="organization"]:focus,
+input[type="other"]:focus,
 textarea:focus {
     border-color: #007bff;
     outline: none;
@@ -80,21 +84,24 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #991aed;
 }
-
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Contact Us</h2>
+        <h2>Sponsor Us</h2>
         <form action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="d4fbed87-feaa-454e-bab6-e88c0f3eb565">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
+            <label for="organization">Organization:</label>
+            <input type="text" id="organization" name="organization" required>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
+            <label for="other">Other mode of Contact:</label>
+            <input type="text" id="other" name="other" required>
             <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-            <input type="submit" value="Submit">
+            <textarea id="message" name="message" rows="6" required></textarea>
+            <input type="submit" value="Sponsor Us">
         </form>
     </div>
 </body>
